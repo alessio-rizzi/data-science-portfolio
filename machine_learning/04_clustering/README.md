@@ -1,9 +1,11 @@
-# Clustering Analysis: K-Means Behavior on Varied Dataset Geometries
+# Exercise: Clustering Analysis: K-Means Behavior on Varied Dataset Geometries
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ln820HQSkrZSOjEWgCTU8QNE4yshhq05?usp=sharing)
+
+## 📝 Description
 This repository contains a Jupyter/Colab notebook comparing and evaluating the behavior of the **K-Means** clustering algorithm across three 2D datasets with distinct geometric properties, shapes, and densities.
 
 ## 📌 Project Overview
-
 Clustering algorithms make fundamental assumptions about the structure of data. **K-Means** assumes that clusters are **convex, spherical, and linearly separable**, aiming to minimize the within-cluster sum of squared Euclidean distances (inertia). 
 
 ## 📊 Datasets Overview
