@@ -1,9 +1,9 @@
-# 🌳 Esercizio: Decision Tree, Gestione dello Sbilanciamento e Tuning
+# 🌳 Esercizio: Decision Tree
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gTngdEr8IBNHr0mEMh2bGq7H0qaA6mVq?usp=sharing)
 
 ## 📝 Descrizione
-In questo progetto, contenuto nel notebook `01_decision_tree_2.ipynb`, esploro l'addestramento e l'ottimizzazione di un modello **Decision Tree** (Albero Decisionale) utilizzando il celebre dataset Iris. 
+In questo progetto, contenuto nel notebook `01_decision_tree.ipynb`, esploro l'addestramento e l'ottimizzazione di un modello **Decision Tree** (Albero Decisionale) utilizzando il celebre dataset Iris. 
 
 L'obiettivo principale non è solo la semplice classificazione, ma affrontare problemi pratici del Machine Learning, come la **gestione delle classi sbilanciate** e la **prevenzione dell'overfitting** attraverso la ricerca dei migliori iperparametri.
 
