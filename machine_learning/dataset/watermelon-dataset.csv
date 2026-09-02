@@ -1,0 +1,18 @@
+ID,color,root,sound,texture,umbilicus,surface,density,sugar,ripe
+1,green,curly,muffled,clear,hollow,hard,0.697,0.46,TRUE
+2,dark,curly,dull,clear,hollow,hard,0.774,0.376,TRUE
+3,dark,curly,muffled,clear,hollow,hard,0.634,0.264,TRUE
+4,green,curly,dull,clear,hollow,hard,0.608,0.318,TRUE
+5,light,curly,muffled,clear,hollow,hard,0.556,0.215,TRUE
+6,green,slightly curly,muffled,clear,slightly hollow,soft,0.403,0.237,TRUE
+7,dark,slightly curly,muffled,slightly blurry,slightly hollow,soft,0.481,0.149,TRUE
+8,dark,slightly curly,muffled,clear,slightly hollow,hard,0.437,0.211,TRUE
+9,dark,slightly curly,dull,slightly blurry,slightly hollow,hard,0.666,0.091,FALSE
+10,green,straight,crisp,clear,flat,soft,0.243,0.267,FALSE
+11,light,straight,dull,blurry,flat,hard,0.245,0.057,FALSE
+12,light,curly,muffled,blurry,flat,soft,0.343,0.099,FALSE
+13,green,slightly curly,muffled,slightly blurry,hollow,hard,0.639,0.161,FALSE
+14,light,slightly curly,dull,slightly blurry,hollow,hard,0.657,0.198,FALSE
+15,dark,slightly curly,muffled,clear,slightly hollow,soft,0.36,0.37,FALSE
+16,light,curly,muffled,blurry,flat,hard,0.593,0.042,FALSE
+17,green,curly,dull,slightly blurry,slightly hollow,hard,0.719,0.103,FALSE
