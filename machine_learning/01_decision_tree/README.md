@@ -25,4 +25,4 @@ The notebook is structured into the following key steps:
 
 ## 🚀 How to View and Run the Exercise
 The fastest way to explore the code is by clicking the **"Open in Colab"** badge at the top of this page.
-The environment will open directly in your browser, pre-configured and ready to use. The file opens in read-only mode: you can run all the cells to view the results, but if you wish to experiment or modify the code, simply click on `File > Salva una copia in Drive`.
+The environment will open directly in your browser, pre-configured and ready to use. The file opens in read-only mode: you can run all the cells to view the results, but if you wish to experiment or modify the code, simply click on `File > Save a copy in Drive`.
