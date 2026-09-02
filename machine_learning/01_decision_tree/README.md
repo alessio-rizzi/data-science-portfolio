@@ -1,27 +1,28 @@
-# 🌳 Esercizio: Decision Tree
+# 🌳 Exercise: Decision Tree
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gTngdEr8IBNHr0mEMh2bGq7H0qaA6mVq?usp=sharing)
 
-## 📝 Descrizione
-In questo progetto, contenuto nel notebook `01_decision_tree.ipynb`, esploro l'addestramento e l'ottimizzazione di un modello **Decision Tree** (Albero Decisionale) utilizzando il celebre dataset Iris. 
+## 📝 Description
+In this project, contained within the `01_decision_tree.ipynb` notebook, I explore the training and optimization of a **Decision Tree** model using the renowned Iris dataset.
 
-L'obiettivo principale non è solo la semplice classificazione, ma affrontare problemi pratici del Machine Learning, come la **gestione delle classi sbilanciate** e la **prevenzione dell'overfitting** attraverso la ricerca dei migliori iperparametri.
+The main objective goes beyond simple classification to tackle practical Machine Learning challenges, such as **handling imbalanced classes** and **preventing overfitting** through hyperparameter tuning.
 
-## 🎯 Competenze dimostrate e Flusso di Lavoro
-Il notebook è strutturato nei seguenti passaggi chiave:
-1. **Valutazione del Modello Base**: Addestramento con *Stratified 5-Fold Cross-Validation* e analisi delle performance tramite Matrice di Confusione e Classification Report.
-2. **Analisi ROC Multiclasse**: Binarizzazione del target (approccio *One-vs-Rest*) per tracciare le curve ROC e calcolare l'AUC per ciascuna classe.
-3. **Gestione Classi Sbilanciate (Oversampling)**: "Inflazione" manuale (replica 10x) della classe *Virginica* nel training set per testare il comportamento dell'algoritmo in presenza di una classe fortemente predominante.
-4. **Cost-Sensitive Learning**: Utilizzo del parametro `class_weight` per penalizzare gli errori sulla classe *Virginica* senza alterare fisicamente il dataset, dimostrando l'equivalenza matematica (100% di match) con il metodo dell'inflazione manuale.
-5. **Hyperparameter Tuning**: Utilizzo di `GridSearchCV` per esplorare quasi 40.000 combinazioni di iperparametri in parallelo, al fine di ridurre l'overfitting e trovare l'architettura ottimale dell'albero.
-6. **Visualizzazione Avanzata**: Plot affiancato della Matrice di Confusione finale e della struttura grafica dell'albero decisionale ottimizzato.
+## 🎯 Skills Demonstrated & Workflow
+The notebook is structured into the following key steps:
 
-## 🛠️ Tecnologie Utilizzate
+1. **Baseline Model Evaluation**: Training with Stratified 5-Fold Cross-Validation and evaluating performance via Confusion Matrix and Classification Report.
+2. **Multiclass ROC Analysis**: Target binarization (One-vs-Rest approach) to plot ROC curves and compute the AUC for each class.
+3. **Handling Imbalanced Classes (Oversampling)**: Manually inflating (10x replication) the Virginica class in the training set to test the algorithm's behavior in the presence of a heavily predominant class.
+4. **Cost-Sensitive Learning**: Using the class_weight parameter to penalize misclassifications of the Virginica class without physically altering the dataset, demonstrating mathematical equivalence (100% match) with the manual inflation method.
+5. **Hyperparameter Tuning**: Leveraging GridSearchCV to explore nearly 40,000 hyperparameter combinations in parallel, aiming to reduce overfitting and discover the optimal tree architecture.
+6. **Advanced Visualization**: Side-by-side plotting of the final Confusion Matrix and the graphical structure of the optimized decision tree.
+
+## 🛠️ Technologies Used
 * **Python**
-* **Scikit-Learn** (DecisionTreeClassifier, GridSearchCV, StratifiedKFold, Metriche di Valutazione)
-* **Matplotlib** (Visualizzazione grafici, Curve ROC, Plot dell'albero)
-* **NumPy** (Manipolazione array e campionamento)
+* **Scikit-Learn** (DecisionTreeClassifier, GridSearchCV, StratifiedKFold, Evaluation Metrics)
+* **Matplotlib** (Data Visualization, ROC Curves, Tree Plotting)
+* **NumPy** (Array manipulation and sampling)
 
-## 🚀 Come visualizzare ed eseguire l'esercizio
-Il modo più rapido per esplorare il codice è cliccare sul badge **"Open in Colab"** in cima a questa pagina. 
-L'ambiente si aprirà direttamente nel tuo browser, preconfigurato e pronto all'uso. Il file si aprirà in sola lettura: potrai eseguire tutte le celle per vedere i risultati, ma se desideri fare esperimenti o modificare il codice, ti basterà cliccare su `File > Salva una copia in Drive`.
+## 🚀 How to View and Run the Exercise
+The fastest way to explore the code is by clicking the **"Open in Colab"** badge at the top of this page.
+The environment will open directly in your browser, pre-configured and ready to use. The file opens in read-only mode: you can run all the cells to view the results, but if you wish to experiment or modify the code, simply click on `File > Salva una copia in Drive`.
