@@ -12,7 +12,7 @@ The project uses the [Housing Prices Dataset](https://www.kaggle.com/datasets/ya
 
 ### 1. Mathematical Foundation
 The primary goal is to find the optimal weights vector $\mathbf{w}$ that minimizes the Least Squares loss function:
-$$ f(\mathbf{w}) = \\frac{1}{2} \\| \\mathbf{X}\\mathbf{w} - \\mathbf{y} \\|_2^2 $$
+$$f(\mathbf{w}) = \\frac{1}{2} \\| \\mathbf{X}\\mathbf{w} - \\mathbf{y} \\|_2^2$$
 
 ### 2. Custom Gradient Descent Optimizer
 A custom Python function, `torch_minimize_loss`, is implemented to optimize the weights. It utilizes PyTorch's `requires_grad=True` and `.backward()` methods to automatically compute derivatives (Autograd). The weights are updated in-place during the backward pass using a specified learning rate ($\epsilon$), and the loop stops when the gradient norm falls below a given tolerance threshold ($\delta$).
