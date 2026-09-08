@@ -9,3 +9,11 @@ This directory contains classical machine learning implementations and explorato
 * **03_bayes_classifier**: Probabilistic classification models built on Bayes' theorem, analyzing feature independence and conditional probability thresholds.
 * **04_clustering**: Unsupervised learning algorithms, featuring density-based clustering models (like DBSCAN) to discover natural data clusters.
 * **05_knn**: K-Nearest Neighbors optimization, featuring distance weighting strategies and metric learning with custom Gaussian kernels.
+* **06_svm_scratch**: Implementation of a linear SVM classifier *from scratch*, solving the primal optimization problem directly via `scipy.optimize.minimize` with linear constraints, and visualizing the resulting decision boundary.
+* **07_svm_2d**: Exploration of `scikit-learn`'s SVM (`SVC`) with different kernels (polynomial, RBF) on synthetic 2D datasets (circles, moons, and linearly non-separable classification data), visualizing decision surfaces and support vectors.
+* **08_svm_kernel**: Design of a custom composite kernel for SVM that combines an RBF kernel for numerical features with a categorical (delta) kernel, applied to a mixed-type synthetic product-success classification dataset.
+
+## Tech Stack & Libraries
+
+* **Language**: Python
+* **Core Libraries**: Scikit-Learn, NumPy, Matplotlib, SciPy, Pandas
