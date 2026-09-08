@@ -12,6 +12,9 @@ Both notebooks use the **MNIST** dataset (28×28 grayscale handwritten digits), 
 ## Process and Methodology
 
 ### 1. GAN (04)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hwxhMGR-SJeX_fQ29kIjoaH7Rwjeklt9?usp=sharing)
+
 * **Generator**: maps a 100-dimensional noise vector to a 28×28 image through three `ConvTranspose2d` layers (64→32→16→1 channels), with `BatchNorm` + `ReLU` and a final `Sigmoid` activation.
 * **Discriminator**: a convolutional classifier (1→16→32→64→1 channels) using `Conv2d`, `BatchNorm`, and `LeakyReLU`, ending in a `Sigmoid` that outputs the probability of an image being real.
 * **Loss**: Binary Cross-Entropy (`BCELoss`) for both networks — the Discriminator is trained to output 1 for real images and 0 for fake ones, while the Generator is trained to make the Discriminator output 1 for its generated images.
@@ -20,6 +23,9 @@ Both notebooks use the **MNIST** dataset (28×28 grayscale handwritten digits), 
 * **Evaluation**: generated digit samples are plotted in a 4×4 grid and saved to disk after training.
 
 ### 2. Wasserstein GAN (05)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1uQV5gOlNJ9MZ-TP7iSAK8RTEXaueDvPM?usp=sharing)
+
 * **Generator**: a deeper architecture mapping a 128-dimensional noise vector to a 28×28 image through four `ConvTranspose2d` layers (128→64→32→16→1), with `BatchNorm` + `ReLU` and a final `Sigmoid`.
 * **Critic** (replacing the Discriminator): the same convolutional feature extractor as the GAN's Discriminator (1→16→32→64), followed by two fully connected layers (64→256→1) with **no Sigmoid**, producing an unbounded real-valued score instead of a probability.
 * **Loss**: the Wasserstein (Earth Mover's) distance, approximated as $\mathbb{E}[C(x_{real})] - \mathbb{E}[C(x_{fake})]$. The Critic is trained to maximize this quantity, while the Generator is trained to maximize the Critic's score on fake images.

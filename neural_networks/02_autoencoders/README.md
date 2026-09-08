@@ -18,6 +18,9 @@ Both models use the same encoder/decoder backbone:
 * **Decoder**: a fully connected layer followed by three transposed convolutions (`ConvTranspose2d`) that upsample the latent vector back into a 28x28 reconstructed image.
 
 ### 2. Undercomplete Autoencoder (02)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hwxhMGR-SJeX_fQ29kIjoaH7Rwjeklt9?usp=sharing)
+
 * The encoder maps directly to a single latent vector `z` via `encoder4` (a `Linear` layer).
 * The model is trained end-to-end with **MSE reconstruction loss** (`torch.nn.MSELoss`) using the Adam optimizer.
 * After training, the notebook:
@@ -26,6 +29,9 @@ Both models use the same encoder/decoder backbone:
   * Estimates the min/max range of each latent dimension and samples random points within that range to **generate new digits** from the decoder.
 
 ### 3. Variational Autoencoder (03)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11xg5F9CIN2GcipzIib5WcrOdMeBNiaVt?usp=sharing)
+
 * The encoder produces two vectors, `mu` and `sigma`, instead of a single latent code, applying the **reparameterization trick** to sample `z` in a differentiable way.
 * The loss function combines:
   * **Reconstruction loss**: sum-reduced MSE between input and output.

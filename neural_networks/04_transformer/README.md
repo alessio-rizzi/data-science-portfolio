@@ -1,5 +1,7 @@
 # Exercise: Transformer for Autoregressive Sequence Generation
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1FE27CxKhGsy7pOOwHui87OLwgfS7YE-1?usp=sharing)
+
 ## Overview
 This notebook implements a **decoder-only Transformer** from scratch in PyTorch to generate text autoregressively, token by token. The model is trained on Dante's *Divina Commedia* (the "comm1-7.txt" corpus) to learn to predict the next token given a context window, and is then used to generate new text from a given prompt.
 

@@ -15,18 +15,27 @@ These three notebooks explore **Graph Neural Networks (GNNs)** using `torch_geom
 ## Process and Methodology
 
 ### 1. Graph Classification (07)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1A5g2fxj3YH9lAbIPHYqluiq46cfsUV-7?usp=sharing)
+
 * Each graph in `MUTAG` is represented as a `torch_geometric.data.Data` object (`x`, `edge_index`, `edge_attr`, `y`); batches of graphs are merged into a single disconnected graph via `DataLoader`, using the `batch` tensor to track node-to-graph membership.
 * **Model**: three stacked `GCNConv` layers (num_features → 64 → 64 → 64) with ReLU activations, followed by **global mean pooling** to obtain a graph-level embedding, a dropout layer (p=0.5), and a final linear classifier.
 * **Training**: Adam optimizer (lr=0.01), Cross-Entropy loss, run for up to 1000 epochs while tracking loss and test accuracy (smoothed with a rolling average).
 * **Evaluation**: per-molecule predictions are inspected individually, comparing predicted class probabilities (via `softmax`) against the true mutagenicity label.
 
 ### 2. Node Classification (08)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qK2yW0eWh8STz3pHLABIQ6R9DL9Q7omq?usp=sharing)
+
 * **Model**: a 2-layer `GCN` (num_features → 16 hidden channels → num_classes) with ReLU activation and dropout (p=0.5) between layers, operating on the full Cora graph at once.
 * **Training**: Adam optimizer (lr=0.01, weight_decay=5e-4), Cross-Entropy loss computed only on the nodes in `train_mask`, trained for 400 epochs.
 * **Evaluation**: test accuracy is computed on `test_mask` nodes by comparing predicted vs. true classes.
 * **Visualization**: node embeddings are projected to 2D via **t-SNE** and plotted before and after training (and for the test subset only) to visually assess how well the classes separate in embedding space.
 
 ### 3. Link Prediction (09)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1pyi6m62FTIp3zU97gSzOV4DB3MqYiEe6?usp=sharing)
+
 * The Karate Club graph is split into train/validation/test edge sets using `RandomLinkSplit` (undirected, 20% validation, 10% test edges).
 * **Model**: a 2-layer `GCNConv` encoder (in_channels → 16 → 16) with dropout (p=0.8), which produces node embeddings `z`; edge scores are computed as the **dot product** between the embeddings of the two endpoint nodes (`predict`), and scores for all possible edges can be computed at once (`predict_all`).
 * **Negative sampling**: since the graph only contains positive (real) edges, `negative_sampling` generates an equal number of fake edges at each training step, which are concatenated with the positive edges and labeled 0/1.
