@@ -51,3 +51,6 @@ $$\min_{\mathbf{w}} \frac{1}{2}\|\mathbf{w}\|^2 \quad \text{s.t.} \quad y_i(\mat
 
 ## 🚀 How to View and Run the Exercise
 Open the notebooks (`06_svm_scratch.ipynb`, `07_svm_2d.ipynb`, `08_svm_kernel.ipynb`) in Jupyter, Google Colab, or any compatible environment. All three are self-contained: they generate their own synthetic data on the fly, so no external dataset download is required — simply run all cells in order to reproduce the training and visualizations described above.
+
+## 🚀 How to View and Run the Exercise
+The fastest way to explore the code is by opening the notebook `05_iris_knn.ipynb` directly in **Google Colab** or **Jupyter**. All cells can be run top-to-bottom to reproduce the cross-validation scores, tuning curves, and classification plots. If you wish to experiment or modify the code in Colab, simply click on `File > Save a copy in Drive`.

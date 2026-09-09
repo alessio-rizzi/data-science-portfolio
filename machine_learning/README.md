@@ -12,6 +12,8 @@ This directory contains classical machine learning implementations and explorato
 * **06_svm_scratch**: Implementation of a linear SVM classifier *from scratch*, solving the primal optimization problem directly via `scipy.optimize.minimize` with linear constraints, and visualizing the resulting decision boundary.
 * **07_svm_2d**: Exploration of `scikit-learn`'s SVM (`SVC`) with different kernels (polynomial, RBF) on synthetic 2D datasets (circles, moons, and linearly non-separable classification data), visualizing decision surfaces and support vectors.
 * **08_svm_kernel**: Design of a custom composite kernel for SVM that combines an RBF kernel for numerical features with a categorical (delta) kernel, applied to a mixed-type synthetic product-success classification dataset.
+* **09_ensamble_learning**: Comparison of ensemble methods — Bagging, AdaBoost, and Random Forest — against a single decision tree baseline on the Breast Cancer Wisconsin dataset, evaluating accuracy and ROC AUC on train/test splits and analyzing performance stability via cross-validation as the number of estimators grows.
+
 
 ## Tech Stack & Libraries
 
